@@ -1,0 +1,13 @@
+{
+  "nombre": "Oscilador armónico (hbar*omega = 20 meV) con potencial analítico y malla externa",
+  "unidades": {"L_nm": 10.0, "m_ref": 0.067},
+  "dominio": {"malla": {"nodos": "malla_cuadrada/nodos.txt", "elementos": "malla_cuadrada/elementos.txt",
+                        "aristas": "malla_cuadrada/aristas.txt"}},
+  "materiales": [
+    {"nombre": "GaAs (parábola)", "region": "resto", "V_eV": "1.7585e-4*(x**2 + y**2)", "m_rel": 0.067}
+  ],
+  "frontera": {"borde": ["dirichlet", 0.0]},
+  "solver": {"niveles": 6, "integracion": "cuadratura"},
+  "adaptativo": {"activar": false},
+  "salida": {"carpeta": "resultados/oscilador_malla_externa", "graficas": true}
+}

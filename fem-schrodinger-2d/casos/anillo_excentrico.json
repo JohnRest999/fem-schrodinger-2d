@@ -1,0 +1,16 @@
+{
+  "nombre": "Anillo excéntrico de Vinasco et al. (2019): R1 = 12, R2 = 28, w = 10 nm",
+  "unidades": {"L_nm": 28.0, "m_ref": 0.067},
+  "dominio": {"forma": {"tipo": "circulo", "centro": [0, 0], "R": 56.0}},
+  "materiales": [
+    {"nombre": "GaAs", "region": {"incluir": [{"tipo": "circulo", "centro": [0, 0], "R": 28.0}],
+                                  "excluir": [{"tipo": "circulo", "centro": [10, 0], "R": 12.0}]},
+     "V_eV": 0.0, "m_rel": 0.067},
+    {"nombre": "Al0.3Ga0.7As", "region": "resto", "V_eV": 0.262, "m_rel": 0.093}
+  ],
+  "frontera": {"borde": ["dirichlet", 0.0]},
+  "malla": {"h_nm": 2.0, "ajustada": false},
+  "solver": {"niveles": 10, "integracion": "cuadratura"},
+  "adaptativo": {"activar": true, "theta": 0.5, "nodos_max": 60000},
+  "salida": {"carpeta": "resultados/anillo_excentrico", "graficas": true}
+}

@@ -1,0 +1,5 @@
+numpy>=1.26
+scipy>=1.11
+sympy>=1.12
+matplotlib>=3.8
+pdfplumber>=0.11   # solo para estudios/comparacion_vinasco.py

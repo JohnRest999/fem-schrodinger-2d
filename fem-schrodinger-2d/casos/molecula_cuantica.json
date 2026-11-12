@@ -1,0 +1,18 @@
+{
+  "nombre": "Molécula cuántica: dos puntos de GaAs acoplados, dominio rectangular con condiciones mixtas",
+  "unidades": {"L_nm": 10.0, "m_ref": 0.067},
+  "dominio": {"forma": {"tipo": "rectangulo", "esquinas": [[-30, -20], [30, 20]]},
+              "etiquetas": ["inferior", "derecha", "superior", "izquierda"]},
+  "materiales": [
+    {"nombre": "GaAs", "region": {"incluir": [{"tipo": "circulo", "centro": [-10, 0], "R": 8.0},
+                                              {"tipo": "circulo", "centro": [10, 0], "R": 8.0}]},
+     "V_eV": 0.0, "m_rel": 0.067},
+    {"nombre": "Al0.3Ga0.7As", "region": "resto", "V_eV": 0.262, "m_rel": 0.093}
+  ],
+  "frontera": {"izquierda": ["dirichlet", 0.0], "derecha": ["dirichlet", 0.0],
+               "superior": ["neumann", 0.0], "inferior": ["neumann", 0.0]},
+  "malla": {"h_nm": 0.4, "ajustada": true},
+  "solver": {"niveles": 6, "integracion": "cuadratura"},
+  "adaptativo": {"activar": false},
+  "salida": {"carpeta": "resultados/molecula_cuantica", "graficas": true}
+}
